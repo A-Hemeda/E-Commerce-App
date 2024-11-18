@@ -1,4 +1,4 @@
-# E-Commerce
+# E-Commerce App
 
 ## Flutter Application
 
