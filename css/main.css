@@ -1,0 +1,295 @@
+/*-------------------------------  Start Variables ------------------------------- */
+:root {
+  --green-color: #304d30;
+  --darkGreen-color: #163020;
+  --gray-color: #b6c4b6;
+  --winter-color: #eef0e5;
+
+  --maroon-color: #a00d02;
+  --focus-color: #f0f0f0;
+}
+
+/*-------------------------------  End Variables ------------------------------- */
+/*----------------------------------- Start Customize Scrollbar ----------------------*/
+/* Width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Height */
+::-webkit-scrollbar {
+  max-height: 5px !important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: var(--gray-color);
+  box-shadow: inset 0 0 5px rgb(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 100px;
+  box-shadow: inset 0 0 10px var(--darkGreen-color);
+}
+/*----------------------------------- End Customize Scrollbar ----------------------*/
+/*----------------------------------- Start Selection ----------------------*/
+::selection {
+  background-color: var(--winter-color);
+  color: var(--green-color);
+}
+/*----------------------------------- End Selection ----------------------*/
+/*-------------------------------  Start Global Rules ------------------------------- */
+*,
+*::after,
+*::before {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Preahvihear", sans-serif;
+  background-color: var(--gray-color);
+}
+img {
+  display: block;
+  width: 100%;
+}
+a {
+  color: inherit;
+}
+/*-------------------------------  End Global Rules ------------------------------- */
+.crud .head {
+  background-color: var(--green-color);
+  color: var(--winter-color);
+}
+h1 {
+  font-size: 30px;
+}
+.Product {
+  background-color: var(--winter-color);
+  color: var(--darkGreen-color);
+  font-weight: 600;
+}
+div.dataTables_wrapper div.dataTables_length select:focus,
+div.dataTables_wrapper div.dataTables_filter input:focus,
+.inputs select:focus,
+.inputs input:focus {
+  background-color: var(--focus-color);
+  box-shadow: 0px 0px 5px 0px var(--darkGreen-color);
+  border: 0% !important;
+}
+.inputs select {
+  cursor: pointer;
+}
+.category {
+  border: var(--winter-color) solid 2px;
+  padding: 9px !important;
+}
+.category:focus {
+  background-color: var(--focus-color);
+  border: var(--winter-color) solid 2px;
+  outline: 0;
+}
+.category::placeholder {
+  font-weight: 400;
+}
+
+.clear,
+.btnSave {
+  margin-top: 5px;
+  background-color: var(--darkGreen-color);
+  border: var(--darkGreen-color) solid 2px;
+  color: var(--winter-color);
+  padding-block: 7px;
+  border-radius: 3px;
+  padding: 7px 10px;
+  outline: 0;
+}
+#download,
+.edit,
+.create,
+.btnShow {
+  background-color: var(--green-color);
+  color: var(--winter-color);
+  margin-left: -1px;
+  margin-top: 5px;
+  padding-block: 7px;
+  border-radius: 3px;
+  padding: 7px 10px;
+  outline: 0;
+}
+.clear:hover,
+.btnSave:hover {
+  box-shadow: 0px 0px 5px 0px var(--darkGreen-color);
+  background-color: var(--green-color);
+  color: var(--winter-color);
+}
+#download:hover,
+.edit:hover,
+.create:hover,
+.inputs button:focus,
+.btnShow:hover {
+  box-shadow: 0px 0px 5px 0px var(--green-color);
+  background-color: var(--darkGreen-color);
+  color: var(--winter-color);
+}
+#total {
+  color: var(--winter-color);
+}
+div.dataTables_wrapper div.dataTables_length select,
+div.dataTables_wrapper div.dataTables_filter input {
+  border: 0;
+}
+/* The Modal (background) */
+.model {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  z-index: 100;
+}
+.popup-box {
+  width: 80%;
+  padding: 70px;
+  transform: translate(-50%, -50%) scale(0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  background: var(--winter-color);
+  text-align: center;
+}
+.close-button {
+  display: inline-block;
+  position: absolute;
+  top: 15px;
+  font-size: 60px;
+  right: 10px;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  border-radius: 50%;
+  font-weight: bold;
+  color: var(--green-color);
+  text-align: center;
+  cursor: pointer;
+}
+.close-button:hover {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(400deg);
+  color: var(--maroon-color);
+}
+.show-container {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 1.25s 0s, transform 1.25s;
+}
+.pagination > .active > a {
+  background-color: var(--darkGreen-color);
+  color: var(--winter-color);
+  border: var(--darkGreen-color) 1px solid;
+  outline: 0;
+}
+.pagination > .active > a:hover {
+  background-color: var(--green-color);
+  border: var(--green-color) 1px solid;
+  outline: 0;
+}
+.btns{
+  margin-left: 80px;
+}
+/*-------------------------------  Start Media-Queries ------------------------------- */
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+  h1 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 576px) {
+  .popup-box {
+    width: 100%;
+  }
+  h1 {
+    font-size: 15px;
+  }
+  .category {
+    width: 60% !important;
+    margin-right: 10px;
+  }
+  select option{
+    font-size: 10px;
+  }
+}
+/*-------------------------------  End Media-Queries ------------------------------- */
+
+/* style */
+table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before,
+table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control:before {
+  top: 9px;
+  left: 0px;
+  height: 14px;
+  width: 14px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 14px;
+  box-shadow: 0 0 3px #444;
+  box-sizing: content-box;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  line-height: 14px;
+  content: "+";
+  background-color: #31b131;
+}
+
+table.dataTable.dtr-inline.collapsed
+  > tbody
+  > tr.parent
+  > td.dtr-control:before,
+table.dataTable.dtr-inline.collapsed
+  > tbody
+  > tr.parent
+  > th.dtr-control:before {
+  content: "-";
+  background-color: #d33333;
+}
+
+label,
+input {
+  display: block;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+div.dataTables_wrapper div.dataTables_info {
+  text-align: start;
+}
+
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+  margin-top: 15px !important;
+  justify-content: start !important;
+}
+
+@media screen and (max-width: 576px) {
+  div.dataTables_filter input {
+    margin: 10px 0;
+    width: 50% !important;
+  }
+}
